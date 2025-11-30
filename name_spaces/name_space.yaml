@@ -1,0 +1,7 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+   name: ngnix
+
+## To apply this configuration file on the cluster we need the below ccommand 
+# kubectl apply -f fileName   

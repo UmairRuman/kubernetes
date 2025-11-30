@@ -1,0 +1,12 @@
+# Configuration file for creating Pod
+kind: Pod
+apiVersion: v1
+metadata:
+  name: ngnix-pod
+  namespace: ngnix
+spec:
+  containers:
+  - name: ngnix
+    image: ngnix:latest
+    ports:
+    - containerPort: 80    

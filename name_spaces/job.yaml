@@ -1,0 +1,26 @@
+# Job is actually one time task to do some specific task
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: demo-job
+  namespace: ngnix
+spec:
+# Completetion tell how many time we have to run the job
+  completions: 1
+# Parallelism handles the multiple jobs
+  parallelism: 1
+  template:
+    metadata:
+      name: demo-job-pod 
+      labels: 
+         app: batch-task
+    spec:
+      containers:
+      - name: batch-container
+# Busy box is just used to run command like ngnix task is to serve the websites      
+        image: busybox:latest
+# sh means shell and -c means command and we set the sleep timer of 10 seconds (This is the command run by busy box)        
+        command: ["sh","-c","echo Hello dosto && sleep 10" ]
+# Restart policy tells if a job is completed whether to restart again or not        
+      restartPolicy: Never
+  
