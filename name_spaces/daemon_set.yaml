@@ -1,3 +1,5 @@
+# It ensure that at each worker node there should be at least one replica of 
+# the pod should be exist
 kind: DaemonSet
 apiVersion: apps/v1
 metadata:

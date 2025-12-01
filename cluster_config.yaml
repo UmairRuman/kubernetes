@@ -20,5 +20,26 @@ nodes :
 
 # For creation of this cluster we need a command 
 ##
-# kind create cluster --name=first_cluster --config=cluster_config.yaml
+# kind create cluster --name=first-cluster --config=cluster_config.yaml
 ##
+## Output be like something 
+# Creating cluster "first-cluster" ...
+# • Ensuring node image (kindest/node:v1.31.2) 🖼  ...
+# ✓ Ensuring node image (kindest/node:v1.31.2) 🖼
+# • Preparing nodes 📦 📦 📦 📦   ...
+# ✓ Preparing nodes 📦 📦 📦 📦 
+# • Writing configuration 📜  ...
+# ✓ Writing configuration 📜
+# • Starting control-plane 🕹️  ...
+# ✓ Starting control-plane 🕹️
+# • Installing CNI 🔌  ...
+# ✓ Installing CNI 🔌
+# • Installing StorageClass 💾  ...
+# ✓ Installing StorageClass 💾
+# • Joining worker nodes 🚜  ...
+# ✓ Joining worker nodes 🚜
+# Set kubectl context to "kind-first-cluster"
+
+
+# Command to check cluster info 
+# kubectl cluster-info --context kind-first-cluster
